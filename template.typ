@@ -12,6 +12,8 @@
 // The accent color is by default a dark blue
 #let project(title: "", authors: "", affiliations: "", date: "", accent-color: blue.darken(50%), body) = {   
 
+  let light-accent-color = accent-color.lighten(30%).saturate(40%)
+
   // Set the basic document properties
   set document(title: title, author: authors)
 
@@ -50,8 +52,9 @@
   show heading.where(level: 2): it => {v(0.8em) + it}
 
   // Display link with color and underline
-  show link: it => {text(accent-color.lighten(30%).saturate(40%), underline(it))}
-  show ref: it => {text(accent-color.lighten(30%).saturate(40%), underline(it))}
+  show link: it => {text(light-accent-color, underline(it))}
+  show ref: it => {text(light-accent-color, underline(it))}
+
 
   show outline.entry.where(
     level: 1
@@ -83,6 +86,9 @@
     inset: 10pt,
     radius: 4pt,
   )
+
+  show image: it => {block(stroke: 3pt + light-accent-color, radius: 1.5pt, it)}
+
 
   body
   
