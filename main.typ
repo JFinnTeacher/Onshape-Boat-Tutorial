@@ -1,6 +1,7 @@
 #import "template.typ": *
 #import "@preview/oasis-align:0.1.0": *
 #import "@preview/wrap-it:0.1.0": wrap-content
+#import "callouts.typ": *
 // #import "@preview/babble-bubbles:0.1.0": *
 
 
@@ -43,8 +44,11 @@ In this document, you will be guided through the process of creating a sample bo
 #figure(image("overview.png"), caption: [caption of the static figure])
 == Roadmap
 // Roadmap sentence: 3 main elements of the procedure
-== Cautions
+
+// #grid(columns: (1fr, 1fr), note[fsdfsdfsdfs])
+#note[This is a message]
 == Warnings
+#warning[This is a warning]
 == Tools & Materials
 // visual should be of tools/equipment 
 // Where do I get this stuff
