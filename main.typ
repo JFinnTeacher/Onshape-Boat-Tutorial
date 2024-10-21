@@ -110,7 +110,7 @@ Click on the origin point and then move your mouse outwards as seen in @rect-ske
 ],
 [#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. This can cause issues later down the line in more complex models, and should be avoided whenever possible.]
 
-Now that we have shape, we can add dimensions. Select the `Dimension` from the right side of the toolbar. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.])
+Now that we have shape, we can add dimensions. Select the `Dimension` tool from the right side of the toolbar. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.])
 
 
 
@@ -123,8 +123,6 @@ Now that we have shape, we can add dimensions. Select the `Dimension` from the r
   ])]
 )
 
-
-
 == 3 - Sketching the front of the boat contour 
 
 Using the `Circle` tool, add two circle to your the top corners of your sketch as seen in @double-circle. When selecting the size of the circle, line up your cursor with the opposite opposite sided corner. As you get close, the line will change colors to orange and the icon for `Tangent` will appear. The icon signifies that Onshape is automatically adding a relation to the sketch. If done correctly, the circle will appear black in color. 
@@ -136,6 +134,8 @@ Select the cutting tool, and click and drag your mouse of the sections of the ci
 [#figure(image("images/finish-boat-contour.png"), caption: []) <finish-boat-contour>])
 
 // #note[The trim tool is a great way to remove unwanted geometry from a sketch.]
+
+== 4 - Extruding the Sketch
 
 
 

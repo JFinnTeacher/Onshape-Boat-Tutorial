@@ -23,7 +23,7 @@
     footer: text(.7em, luma(30%))[#affiliations #h(1fr) Jason Daniel Pieck]
   )
   
-  set grid(column-gutter: .65em)
+  set grid(column-gutter: .2in)
   set par(justify: true)
   // set box(height: 1em)
   // show box: it => it.body 
