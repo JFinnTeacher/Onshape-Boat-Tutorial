@@ -133,12 +133,42 @@ Select the cutting tool, and click and drag your mouse of the sections of the ci
 ],[#figure(image("images/trim-tool.png"), caption: []) <trim-tool>])],
 [#figure(image("images/finish-boat-contour.png"), caption: []) <finish-boat-contour>])
 
-// #note[The trim tool is a great way to remove unwanted geometry from a sketch.]
+#note[The trim tool is a great way to remove unwanted geometry from a sketch.]
 
 == 4 - Extruding the Sketch
 
+#oasis-align(int-dir:-1,[Now that we hae a sketch, we can "extrude" it to make it three-dimensional. Click the `Extrude` button in toolbar @extrude-contour.
+// next to the `Sketch` button, 
+and then select the face of sketch 1 as shown in . As in Step 1, you can either click on the face in the graphics area or on the feature list. Set the `Depth` of the extrude to 2in and click the check mark. If you reorient your part, it should now look like @boat-base-done
+],
+oasis-align([#figure(image("images/extrude-contour.png"), caption: []) <extrude-contour>
+], [#figure(image("images/boat-base-done.png"), caption: []) <boat-base-done>]))
 
+== 5 - Adding a sketch to non-planar geometry
+#oasis-align([We want the front of the boat to curve up. Create another `Sketch`, this time clicking on the flat surface side surface of the boat as seen in @side-plane. 
 
+#tip[Onshape will not allow you to built a sketch on a curved surface. As a result, we need to built a sketch that is offset from the surface]
+],
+[#figure(image("images/side-plane.png"), caption: []) <side-plane>],)
+
+Looking at the tipped end of the boat, add a spline using the `Spline` tool. Start at the bottom left of the curve-start, and then go to somewhere above the top of the boat as in @coincident. To cancel a third spline point, press `Esc` on your keyboard. While holding `Shift`, click on the end point of the spline and the tip of the boat, and then add a relation called `Coincident`. This will force the two points to overlap. 
+
+Add another `Coincident` relationship, this time between the spline control node and the closest edge of the boat as seen in @spline-align. The nodes should be stuck to their respective lines. Drag each not to a position that gives you a shape to your liking similar to @spline-drag.
+
+#oasis-align(
+  [#figure(image("images/coincident.png"), caption: []) <coincident>],
+  oasis-align(
+    [#figure(image("images/spline-align.png"), caption: []) <spline-align>],
+    [#figure(image("images/spline-drag.png"), caption: []) <spline-drag>],
+))
+
+#oasis-align(
+[Compelete the sketch by using the `Line` tool to draw two lines and close the shape of the spline. If the sketch is successfully closed it will look like @complete-sketch. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition from `Bind` to `Through all`. 
+
+#figure(image("images/complete-sketch.png"), caption: []) <complete-sketch>
+], 
+[#figure(image("images/extrude-remove.png"), caption: []) <extrude-remove>]
+)
 = Conclusion
 /** 
 - Move beyond congrats

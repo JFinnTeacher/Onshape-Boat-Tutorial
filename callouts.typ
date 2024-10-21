@@ -33,3 +33,14 @@
     content
   }
 )
+
+#let tip(content) = block(
+  fill: rgb("#E5F8F8"),
+  inset: block-inset, 
+  radius: block-radius,
+  width: 100%,
+  {
+    heading(level: 3, text(rgb("#00BFBC"))[Tip])
+    content
+  }
+)
