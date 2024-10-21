@@ -46,9 +46,7 @@ In this document, you will be guided through the process of creating a sample bo
 // Roadmap sentence: 3 main elements of the procedure
 
 // #grid(columns: (1fr, 1fr), note[fsdfsdfsdfs])
-#note[This is a message]
 == Warnings
-#warning[This is a warning]
 == Tools & Materials
 // visual should be of tools/equipment 
 // Where do I get this stuff
@@ -67,6 +65,47 @@ Make sure that steps are:
 - Command form ("Do this")
 - include suplementary explainations
 **/
+
+== Step 1 - Starting Your first Sketch
+The first thing that we need to do whenever making a model in CAD is making a sketch. A sketch is a 2D stucture that exists on a plane. 
+
+To make your first sketch, click the `Sketch` button in the tool bar as seen in @sketch. 
+
+#figure(image("images/sketch.png"), caption: []) <sketch>
+
+Onshape will then prompt you to select a plane. Select the top plane by either clicking on the plane in the view-window or on the feature tree as seen in @select-plane. 
+
+#figure(image("images/select-plane.png")) <select-plane>
+
+It is best practice to be looking directly at the plane you are working on, so navigate to the view-finder as seen in @view-finder and click on the `Top` surface. This will reorient your view-window such that you now face the top plane directly head on. 
+
+#figure(image("images/view-finder.png")) <view-finder>
+
+== Step 2 - Sketching base of the boat contour
+
+Select the `Center point rectangle` tool from the rectangle tools dropdown as seen in @rect-tool. After selecting, your tool should change in a cross-hair shaped like a plus sign.
+
+#figure(image("images/rect-tool.png")) <rect-tool>
+
+Click on the origin point and then move your mouse outwards as seen in @rect-sketch. At this point in time, it does not matter how far out you go, nor that the numbers that you see in @rect-sketch match your own. 
+
+#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. This can cause issues later down the line in more complex models, and should be avoided whenever possible.]
+
+#figure(image("images/rect-sketch.png")) <rect-sketch>
+
+Now that we have shape, we can add dimensions. Select the `Dimension` tool as seen in @dim-tool. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.
+
+#figure(image("images/dim-tool.png")) <dim-tool>
+
+#figure(image("images/rect-dim.png")) <rect-dim>
+
+We want this rectangle to be a square, and while we could add the same dimension to the bottom or top side of the rectangle, we can add a "constraint" that forces those sides to be equal. We can do this by first holding `Shift` on your keyboard, and then selecting the two sides that you want to be equal. Then go to the constraints menu, and select `Equal` as show in @rect-equal. Now if we change the dimension set earlier, all sides of the square will change size automatically. 
+
+#figure(image("images/rect-equal.png")) <rect-equal>
+
+== Step 3 - Sketching the front of the boat contour 
+
+
 
 = Conclusion
 /** 
