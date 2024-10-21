@@ -25,7 +25,7 @@
     paper: "us-letter", 
     // height: auto, // setting this to auto will make the page go on until the next page break
     margin: 1in,
-    header: text(.7em)[#enhanced-date(date) #h(1fr) #counter(page).display("1/1", both: true)],
+    header: context{text(.7em)[#enhanced-date(date) #h(1fr) #counter(page).display("1/1", both: true)]},
     footer: text(.7em)[#affiliations #h(1fr) Jason Daniel Pieck]
   )
   

@@ -41,7 +41,7 @@ In this document, you will be guided through the process of creating a sample bo
 // story: give me a tour of the place, and then Im ready to start
 
 // Teach the reader terms and concepts to do steps
-#figure(image("overview.png"), caption: [caption of the static figure])
+#figure(image("images/overview.png"), caption: [caption of the static figure])
 == Roadmap
 // Roadmap sentence: 3 main elements of the procedure
 
