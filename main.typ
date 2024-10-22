@@ -133,7 +133,7 @@ Select the cutting tool, and click and drag your mouse of the sections of the ci
 ],[#figure(image("images/trim-tool.png"), caption: []) <trim-tool>])],
 [#figure(image("images/finish-boat-contour.png"), caption: []) <finish-boat-contour>])
 
-#note[The trim tool is a great way to remove unwanted geometry from a sketch.]
+#tip[The trim tool is a great way to remove unwanted geometry from a sketch.]
 
 == 4 - Extruding the Sketch
 
@@ -147,7 +147,7 @@ oasis-align([#figure(image("images/extrude-contour.png"), caption: []) <extrude-
 == 5 - Adding a sketch to non-planar geometry
 #oasis-align([We want the front of the boat to curve up. Create another `Sketch`, this time clicking on the flat surface side surface of the boat as seen in @side-plane. 
 
-#tip[Onshape will not allow you to built a sketch on a curved surface. As a result, we need to built a sketch that is offset from the surface]
+#note[Onshape will not allow you to built a sketch on a curved surface. As a result, we need to built a sketch that is offset from the surface]
 ],
 [#figure(image("images/side-plane.png"), caption: []) <side-plane>],)
 
@@ -169,9 +169,51 @@ Add another `Coincident` relationship, this time between the spline control node
 ], 
 [#figure(image("images/extrude-remove.png"), caption: []) <extrude-remove>]
 )
+
+== 6 - Shaping the bottom of the hull
+#oasis-align([Create another sketch, this time on the flat back side of the boat. First create a center line using the `Line` tool by aligning with the top and bottom midpoints of the hull. Make this line a construction line by clicking the `Construction` tool. 
+
+Next, using the `Spline` tool, create an arc same similar to @bottom-spline. Here, the nodes do not need to be precisely aligned, and you are encouraged to experiment with different shapes. 
+], 
+warning[When making the spline, make sure the endpoints don't terminate at a corner of the hull.This is to allow for the use of "imprinting" when extruding the sketch.])
+
+Next, click the `Mirror` tool to mirror the spline across the centerline you created earlier. Onshape will prompt you for the order in which objects should be selected. The final result will look like @mirror, and any future adjustments will keep both sides identical. 
+
+
+#oasis-align(
+[#figure(image("images/bottom-spline.png"), caption: []) <bottom-spline>], 
+[#figure(image("images/mirror.png"), caption: []) <mirror>]
+)
+
+== 7 - Rounding the corners
+#oasis-align(int-dir:-1, [Select the `Fillet` tool from the tool bar, and select the top two arcs found at the front of the ship. In the dialog box, set the `Radius` to `1.9 in`,  Notice that the curve propagates to the rest of the hull as seen in @fillet.
+
+#warning[Setting the `Radius` to the height of the boat will result in the fillet failing. 
+Therefore, we make the `Radius` 0.1in less than the height of the ship.
+//  This is because of the geometry we created at the tip of the boat. 
+ ]
+], 
+[#figure(image("images/fillet.png"), caption: []) <fillet> ])
+
+== 8 - Hollowing out the hull
+#oasis-align(int-dir: -1,
+[#figure(image("images/shell.png"), caption: []), <shell>],  
+[Now that we have shaped the exterior of the hull, we can use the `Shell` tool to carve out its interior. Select the `Shell` tool from the tool bar and click on the top surface of the boat. A preview of the feature should appear in the graphics area as seen in #link("lol")[Figure 21]. Set the `Shell thickness` to `0.25in`. 
+
+#tip[The resulting geometry of the hull interior is not ideal for placing electronics. Therefore, consider adding additional features to create a flat surface. ]
+])
+
 = Conclusion
+#oasis-align([Congratulations! You have just finished making a model boat in Onshape! This model is a great base for any boat design, but needs to be expanded on to be viable for competition. Consider adding cutouts for your motors and propellers, and try to find ways to protect your electronics from getting splashed with water. Try an think of other ways that a boat can be modeled. Thanks for following along, and se you at the next meeting!], 
+success(title: [Learned Skills], [
+  - Make a sketch using lines and arcs
+  - Constrain sketch geometry using relations and dimensions
+  - Extrude add and extrude remove geometry
+  - Fillet and shell a model
+  ]))
+
 /** 
 - Move beyond congrats
-- Maintence
+- Maintenance
 - Troubleshooting
 **/

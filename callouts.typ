@@ -44,3 +44,14 @@
     content
   }
 )
+
+#let success(content, title: [Success]) = block(
+  fill: rgb("#E6F8ED"),
+  inset: block-inset, 
+  radius: block-radius,
+  width: 100%,
+  {
+    heading(level: 3, text(rgb("#08B94E"), title))
+    content
+  }
+)
