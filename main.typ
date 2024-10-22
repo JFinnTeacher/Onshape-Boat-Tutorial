@@ -40,7 +40,7 @@ As part of the team's training regimen, you and your team will be asked to desig
 
 
 == Overview
-The area in which you view your model is called the "Graphics Area". If you select a part of the model, you will see that a corresponding "Feature" will be highlighted in the "Feature List" on the left side of the window. The Feature List keeps a history of every operation you have performed, and allows you to go back and make changes to earlier states of the model. To add to the feature list, you can select actions on the "toolbar" at the top of the window. Dialog windows are the boxes that appear next to your feature list, and let house the parameters that let you modify your current operation. 
+Looking closer at @overview, Box (1) is the the "Graphics Area" and is where you view your model . If you select a part of the model, you will see that a corresponding "Feature" will be highlighted in the "Feature List" in Box (2). The Feature List keeps a history of every operation you have performed, and allows you to go back and make changes to earlier states of the model. To add to the Feature List, you can select actions on the "toolbar" in Box (3). When you click on a tool, a dialog window like seen in Box (4)  appears next to your feature list, and let house the parameters that let you modify your current operation. 
 
 
 == Tools & Materials
