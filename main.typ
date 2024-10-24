@@ -85,7 +85,7 @@ Make sure that steps are:
 // A sketch is a 2D stucture that exists on a plane. 
 To make your first sketch, click the `Sketch` button on the left side of the tool bar. 
 
-Onshape will then prompt you to select a plane. Select the top plane by either clicking on the plane in the view-window or on the feature tree as seen in @select-plane. 
+Onshape will then prompt you to select a plane. Select the top plane by either clicking on the plane in the view-window or on the feature tree as seen in @select-plane.
 ],
 [#figure(image("images/select-plane.png"), caption: []) <select-plane>
 ])
@@ -97,7 +97,7 @@ It is best practice to be looking directly at the plane you are working on, so n
 #oasis-align([Select the `Center point rectangle` tool from the rectangle tools dropdown as seen in @rect-tool. After selecting, your tool should change in a cross-hair shaped like a plus sign.
 
 
-Click on the origin point and then move your mouse outwards as seen in @rect-sketch. At this point in time, it does not matter how far out you go, nor that the numbers that you see in @rect-sketch match your own. ],
+Click on the origin point and then move your mouse outwards as seen in @rect-sketch. At this point in time, it does not matter how far out you go, nor that the numbers that you see in @rect-sketch match your own. \ ],
 
 [#figure(image("images/rect-tool.png"), caption: []) <rect-tool>
 ])
