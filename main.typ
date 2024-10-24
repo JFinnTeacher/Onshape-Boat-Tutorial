@@ -83,7 +83,7 @@ Make sure that steps are:
 #oasis-align(int-dir: -1, 
 [The first thing that we need to do whenever making a model in CAD is making a sketch. 
 // A sketch is a 2D stucture that exists on a plane. 
-To make your first sketch, click the `Sketch` button on the left side of the tool bar. 
+To make your first sketch, click the #icon("sketch") `Sketch` button on the left side of the tool bar. 
 
 Onshape will then prompt you to select a plane. Select the top plane by either clicking on the plane in the view-window or on the feature tree as seen in @select-plane.
 ],
@@ -94,7 +94,7 @@ It is best practice to be looking directly at the plane you are working on, so n
 // ])
 == 2 - Sketching base of the boat contour
 
-#oasis-align([Select the `Center point rectangle` tool from the rectangle tools dropdown as seen in @rect-tool. After selecting, your tool should change in a cross-hair shaped like a plus sign.
+#oasis-align([Select the #icon("center-rect") `Center point rectangle` tool from the rectangle tools dropdown as seen in @rect-tool. After selecting, your tool should change in a cross-hair shaped like a plus sign.
 
 
 Click on the origin point and then move your mouse outwards as seen in @rect-sketch. At this point in time, it does not matter how far out you go, nor that the numbers that you see in @rect-sketch match your own. \ ],
@@ -106,12 +106,12 @@ Click on the origin point and then move your mouse outwards as seen in @rect-ske
 ],
 [#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. This can cause issues later down the line in more complex models, and should be avoided whenever possible.]
 
-Now that we have shape, we can add dimensions. Select the `Dimension` tool from the right side of the toolbar. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.])
+Now that we have shape, we can add dimensions. Select the #icon("dim") `Dimension` tool from the right side of the toolbar. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.])
 
 
 
 #oasis-align(int-dir: -1,
-  [Instead of adding another dimension, create `Equal`between two perpendicular sides of the rectangle. While selecting, hold `Shift` on your keyboard select `Equal` as show in @rect-equal. Now if we change the dimension set earlier, all sides of the square will change size automatically. 
+  [Instead of adding another dimension, create #icon("equal") `Equal`between two perpendicular sides of the rectangle. While selecting, hold `Shift` on your keyboard select #icon("equal") `Equal` as show in @rect-equal. Now if we change the dimension set earlier, all sides of the square will change size automatically. 
   ],
   [#oasis-align(
     [#figure(image("images/rect-dim.png"), caption: []) <rect-dim>],
@@ -121,7 +121,7 @@ Now that we have shape, we can add dimensions. Select the `Dimension` tool from 
 
 == 3 - Sketching the front of the boat contour 
 
-Using the `Circle` tool, add two circle to your the top corners of your sketch as seen in @double-circle. When selecting the size of the circle, line up your cursor with the opposite opposite sided corner. As you get close, the line will change colors to orange and the icon for `Tangent` will appear. The icon signifies that Onshape is automatically adding a relation to the sketch. If done correctly, the circle will appear black in color. 
+Using the #icon("circle") `Circle` tool, add two circle to your the top corners of your sketch as seen in @double-circle. When selecting the size of the circle, line up your cursor with the opposite opposite sided corner. As you get close, the line will change colors to orange and the icon for #icon("tangent") `Tangent` will appear. The icon signifies that Onshape is automatically adding a relation to the sketch. If done correctly, the circle will appear black in color. 
 
 Select the cutting tool, and click and drag your mouse of the sections of the circle as signified in @trim-tool. Once you are finished, your sketch should look like @finish-boat-contour. Select the green check mark, and your sketch is finished!
 
@@ -133,7 +133,7 @@ Select the cutting tool, and click and drag your mouse of the sections of the ci
 
 == 4 - Extruding the Sketch
 
-#oasis-align(int-dir:-1,[Now that we hae a sketch, we can "extrude" it to make it three-dimensional. Click the `Extrude` button in toolbar @extrude-contour.
+#oasis-align(int-dir:-1,[Now that we hae a sketch, we can "extrude" it to make it three-dimensional. Click the #icon("extrude") `Extrude` button in toolbar @extrude-contour.
 // next to the `Sketch` button, 
 and then select the face of sketch 1 as shown in . As in Step 1, you can either click on the face in the graphics area or on the feature list. Set the `Depth` of the extrude to 2in and click the check mark. If you reorient your part, it should now look like @boat-base-done
 ],
