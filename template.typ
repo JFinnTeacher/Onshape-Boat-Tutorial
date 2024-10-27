@@ -12,7 +12,7 @@
 
   set document(title: title, author: authors)
 
-  set text(font: "Barlow")
+  set text(font: "Barlow", 10pt)
   
   set page(
     paper: "us-letter", 
