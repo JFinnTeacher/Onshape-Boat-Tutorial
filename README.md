@@ -1,5 +1,6 @@
 # Todo
-- [ ] Add arrows
+- [x] Add arrows
+- [ ] Fix first image numbering
 
 ## If there is time
 - [ ] Clean up images 

@@ -15,14 +15,14 @@
 /** 
 - 4 to 5 whole pages
 - 8 to 15 steps (should be linear and non-branching)
-- Techical procedure to someone with 0 background knowledge
-- can be chatper of manual 
+- Technical procedure to someone with 0 background knowledge
+- can be chapter of manual 
 **/
 
 = Introduction
 /*
 - hook: someone without background to do x (what this is about )
-  - make, model, version, procedure, context, no background, knowlege
+  - make, model, version, procedure, context, no background, knowledge
 - X should be particular
 - about 1.5 pages
 - context
@@ -33,14 +33,16 @@
 Ahoy there, and welcome to Cyclone RobSub! 
 // We are thrilled to have you with us!
 
-As part of the team's training regimen, you and your team will be asked to design, model, assemble, wire, and program a small model boat. The primary goal of this document is to familiarize yourself with the fundamentals of computer aided design (CAD) design in Onshape. No prior experience in any CAD software is required to follow along. By the end of the tutorial, you will have created a model boat like the one seen in @overview that you and your team are encouraged to build off of.
+As part of the team's training regimen, you and your team will be asked to design, model, assemble, wire, and program a small model boat. This document aims to familiarize you with the fundamentals of computer aided design (CAD) in Onshape. No prior experience in any CAD software is required to follow along. By the end of the tutorial, you will have created a model boat like the one seen in @overview.
+//  that you and your team are encouraged to build off of.
+
 
 #figure(image("images/overview.png"), caption: []) <overview>
 //highlight
 
 
-== Overview
-Looking closer at @overview, Box (1) is the the "Graphics Area" and is where you view your model . If you select a part of the model, you will see that a corresponding "Feature" will be highlighted in the "Feature List" in Box (2). The Feature List keeps a history of every operation you have performed, and allows you to go back and make changes to earlier states of the model. To add to the Feature List, you can select actions on the "toolbar" in Box (3). When you click on a tool, a dialog window like seen in Box (4)  appears next to your feature list, and let house the parameters that let you modify your current operation. 
+== Overview of Onshape's User Interface
+Looking closer at @overview, Box 1 contains the the "Graphics Area" in which you view and edit your model. Select a part of the model to see a corresponding "Feature" highlighted in the "Feature List" in Box 2. The "Feature List" keeps a history of every operation performed, allowing you to go back and make changes to earlier states of the model. To add to features to the "Feature List," select actions on the "Toolbar" in Box 3. Selecting a tool will open a "Dialog Window" as seen in Box 4 and houses the parameters to modify the current operation. To see how tools affect your design, click on the "View Finder" in Box 5 to change your view angle. 
 
 
 == Tools & Materials
@@ -49,17 +51,18 @@ Looking closer at @overview, Box (1) is the the "Graphics Area" and is where you
 // visual should be of tools/equipment 
 
 
-As mentioned before, this tutorial utilizes the CAD software Onshape. Before beginning this tutorial, create an account at #link("https://www.onshape.com/en/education")[onshape.com/en/education]. Using this link gives you access to the free education version of Onshape. 
+As mentioned before, this tutorial utilizes the CAD software "Onshape". Before beginning this tutorial, create an account at #link("https://www.onshape.com/en/education")[onshape.com/en/education]. Using this link gives you access to the free education version of Onshape. 
 
-If you would like to follow along in a different CAD software, bear in mind that the user interface and button names may differ from OnShape. That said, the operations utilized this tutorial are very conventional and generally exist in all CAD software.
+#note[You can follow this tutorial in a different CAD Software. While the user interfaces differ, this tutorial utilizes conventional operations that are common to all CAD software.]
 
 == Roadmap
 // Roadmap sentence: 3 main elements of the procedure
-You will start by first making the basic shape of a boat, and then slowly carve away at it to refine shape that is more aerodynamic and can be propelled through the water.
+We will start by making the basic shape of a boat, and then slowly carve away at it to refine its geometry that so that it can be propelled cleanly through the water. 
+// Throughout the tutorial 
 
 
 == Warnings
-CAD is powerful because of the wider verities of ways that modeling challenges can be approached. As a result, it is impossible for this tutorial to be fully comprehensive. Bearing that in mind, this tutorial will be focused on only one method to achieve the desired shape. If you are interested in alternatives, I highly recommend you check out the wider verity of resources available online.
+CAD's power manifests in the wide verity of ways that modeling challenges can be approached. Consequently, this tutorial cannot be fully comprehensive and will only focus on one method to achieve the desired shape. If you are interested in alternatives, I highly recommend you check out the wider verity of resources available online.
 
 
 = Procedure
@@ -73,7 +76,7 @@ Options:
 
 Make sure that steps are:
 - Command form ("Do this")
-- include suplementary explainations
+- include supplementary explanations
 **/
 
 // #box(image("images/sketch-button.png"))
@@ -104,7 +107,9 @@ Click on the origin point and then move your mouse outwards as seen in @rect-ske
 
 #oasis-align([#figure(image("images/rect-sketch.png"), caption: [], ) <rect-sketch>
 ],
-[#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. This can cause issues later down the line in more complex models, and should be avoided whenever possible.]
+[#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. 
+// This can cause issues later down the line in more complex models, and should be avoided whenever possible.
+]
 
 Now that we have shape, we can add dimensions. Select the #icon("dim") `Dimension` tool from the right side of the toolbar. Your mouse should once again change to a cross-hair. Click on the left side of the rectangle, and then click off to the side as seen in @rect-dim.])
 
