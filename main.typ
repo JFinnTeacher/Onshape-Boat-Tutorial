@@ -128,11 +128,11 @@ Now that we have rectangle, we can add dimensions. Select the #icon("dim") `Dime
 
 Using the #icon("circle") `Circle` tool, add two circles to your the top corners of your sketch as seen in @double-circle. When selecting the size of the circle, line up your cursor with the opposite sided corner. As you approach the corner, the line will change colors to orange and the icon for #icon("tangent") `Tangent` will appear. The icon signifies that Onshape is automatically adding a relation to the sketch. If done correctly, the circle will appear black in color due to being fully defined. 
 
-Next, select the #icon("trim") `Trim` tool and click and drag your mouse along the paths of the arrows drawn in @trim-tool. This process will remove parts of the circle from the sketch. Once you are finished, your sketch should look like @finish-boat-contour. Select the green check mark as seen in @double-circle, and your sketch is finished!
+Next, select the #icon("trim") `Trim` tool and click and drag your mouse along the paths of the arrows drawn in @trim-tool. This process will remove parts of the circle from the sketch. Once you are finished, your sketch should look like @finished-boat-contour. Select the green check mark as seen in @finished-boat-contour, and your sketch is finished!
 
 #oasis-align([#oasis-align([#figure(image("images/double-circle.png"), caption: []) <double-circle>
 ],[#figure(image("images/trim-tool.png"), caption: []) <trim-tool>])],
-[#figure(image("images/finish-boat-contour.png"), caption: []) <finish-boat-contour>])
+[#figure(image("images/finished-boat-contour.png"), caption: []) <finished-boat-contour>])
 
 // #tip[The trim tool is a great way to remove unwanted geometry from a sketch.]
 
@@ -147,7 +147,7 @@ and then select the face of sketch 1 as shown in as seen in @extrude-contour. Si
 oasis-align([#figure(image("images/extrude-contour.png"), caption: []) <extrude-contour>
 ], [#figure(image("images/boat-base-done.png"), caption: []) <boat-base-done>]))
 
-== 5 - Sketch with splines and lines
+== 5 - Sketching with splines and lines
 #oasis-align([
 // We want the front of the boat to curve up. 
 Create another #icon("sketch") `Sketch`, this time clicking on the flat side surface of the boat as seen in @side-plane. 
