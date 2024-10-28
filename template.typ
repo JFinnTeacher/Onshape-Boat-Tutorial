@@ -91,7 +91,7 @@
   let path = "icons/" + name + ".svg"
   box(
     height: .7em,
-    inset: (x: 0.05em, y: -0.2em),
+    inset: (x: 0.05em, y: -0.22em),
     image(path, 
     height: 1.15em
     )

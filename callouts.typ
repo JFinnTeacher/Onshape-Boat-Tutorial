@@ -1,3 +1,4 @@
+#import "template.typ": icon
 #let block-inset = 1em
 #let block-radius = 0.5em
 // #set block(
@@ -18,7 +19,7 @@
     show image: it => block(stroke: none, box(height: 1em, it))
     
     // heading(level: 3, text(rgb("#EC7500"))[#box(image("circle-alert.svg")) Warning])
-    heading(level: 3, text(rgb("#EC7500"))[Warning])
+    heading(level: 3, text(rgb("#EC7500"))[#icon("warning") Warning])
     content
   }
 )}
@@ -29,7 +30,7 @@
   radius: block-radius,
   width: 100%,
   {
-    heading(level: 3, text(rgb("#086DDD"))[Note])
+    heading(level: 3, text(rgb("#086DDD"))[#icon("info") Note])
     content
   }
 )
@@ -40,7 +41,7 @@
   radius: block-radius,
   width: 100%,
   {
-    heading(level: 3, text(rgb("#00BFBC"))[Tip])
+    heading(level: 3, text(rgb("#00BFBC"))[#icon("flame") Tip])
     content
   }
 )
@@ -51,7 +52,7 @@
   radius: block-radius,
   width: 100%,
   {
-    heading(level: 3, text(rgb("#08B94E"), title))
+    heading(level: 3, text(rgb("#08B94E"), [#icon("check") #title]))
     content
   }
 )
