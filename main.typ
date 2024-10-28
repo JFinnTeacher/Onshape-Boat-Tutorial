@@ -53,11 +53,12 @@ Looking closer at @overview, #link(<overview>)[Box 1] (green) contains the the "
 
 As mentioned before, this tutorial utilizes the CAD software "Onshape". Before beginning this tutorial, create an account at #link("https://www.onshape.com/en/education")[onshape.com/en/education]. Using this link gives you access to the free education version of Onshape. 
 
-// #note[You can follow this tutorial in a different CAD Software. While the user interfaces differ, this tutorial utilizes conventional operations that are common to all CAD software.]
+
 
 == Roadmap
 // Roadmap sentence: 3 main elements of the procedure
-We will start by making the basic shape of a boat, and then slowly carve away at it to refine its geometry that so that it can be propelled cleanly through the water. 
+We will start by sketching the basic shape of a boat before "extruding" (projecting) that outwards. Then through a series of additional sketches and extrudes, we will slowly carve away at it to refine its geometry. Lastly, we round out some the front edges for a classic boat form and hollow out the interior to make room for storage.
+// that so that it can be propelled cleanly through the water. 
 // Throughout the tutorial 
 
 
@@ -147,32 +148,37 @@ and then select the face of sketch 1 as shown in as seen in @extrude-contour. Si
 oasis-align([#figure(image("images/extrude-contour.png"), caption: []) <extrude-contour>
 ], [#figure(image("images/boat-base-done.png"), caption: []) <boat-base-done>]))
 
-== 5 - Sketching with splines and lines
+== 5 - Sketching with splines and lines <splines-and-lines>
 #oasis-align([
 // We want the front of the boat to curve up. 
-Create another #icon("sketch") `Sketch`, this time clicking on the flat side surface of the boat as seen in @side-plane. 
+Create another #icon("sketch") `Sketch` and select the flat side surface of the boat for the `Sketch Plane` seen in @side-plane. 
 
 #note[Onshape will not allow you to built a sketch on a curved surface. As a result, we need to built a sketch that is offset from the surface]
 ],
 [#figure(image("images/side-plane.png"), caption: []) <side-plane>],)
 
-Looking at the tipped end of the boat, add a spline using the #icon("spline") `Spline` tool. Start at the bottom left of the curve-start, and then go to somewhere above the top of the boat as in @coincident. To cancel a third spline point, press `Esc` on your keyboard. Click on the end point of the spline and the tip of the boat, and then add a relation called #icon("coincident") `Coincident`. This will force the two points to overlap. 
+#oasis-align(
+[#figure(image("images/coincident.png"), caption: []) <coincident>],
+[Looking at the tipped end of the boat, add a spline using the #icon("spline") `Spline` tool. Start at the point where the middle face line meets the bottom edge of the boat and then click a short distance above the top of the boat as shown in @coincident. After adding a second point, press `Esc` twice on your keyboard. Once your mouse is no longer a crosshair, click on the end point of the spline and the tip of the boat, and then add a relation called #icon("coincident") `Coincident`. This will force the two points to overlap. ], 
+)
 
 Add another #icon("coincident") `Coincident` relationship, this time between the spline control node and the closest edge of the boat as seen in @spline-align. The nodes should be stuck to their respective lines. The position of each node along the line does not need to be exact to @spline-drag, and you are encouraged to adjust them to your liking.
 
+Complete the sketch by using the #icon("line") `Line` tool to draw two lines shown with arrows in @complete-sketch to close the sketch. If the sketch is successfully closed, the interior of the sketch will become slightly darker in color.. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
+
 #oasis-align(
-  [#figure(image("images/coincident.png"), caption: []) <coincident>],
+  [#figure(image("images/spline-align.png"), caption: []) <spline-align>],
   oasis-align(
-    [#figure(image("images/spline-align.png"), caption: []) <spline-align>],
     [#figure(image("images/spline-drag.png"), caption: []) <spline-drag>],
+    [#figure(image("images/complete-sketch.png"), caption: []) <complete-sketch>],
 ))
 
 
 
-#oasis-align(int-dir:-1, [Complete the sketch by using the #icon("line") `Line` tool to draw two lines and close the shape of the spline. If the sketch is successfully closed it will look like @complete-sketch. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
-], 
-[#figure(image("images/complete-sketch.png"), caption: []) <complete-sketch>]
-)
+// #oasis-align(int-dir:-1, [
+// ], 
+// []
+// )
 
 // #oasis-align(
 // [Compelete the sketch by using the #icon("line") `Line` tool to draw two lines and close the shape of the spline. If the sketch is successfully closed it will look like @complete-sketch. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
@@ -183,20 +189,23 @@ Add another #icon("coincident") `Coincident` relationship, this time between the
 // )
 
 == 6 - Extrude-remove the sketch
-#oasis-align(
+#oasis-align(int-dir: -1,
 [#figure(image("images/extrude-remove.png"), caption: []) <extrude-remove>], 
-[Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
+[Exit the sketch, and make another #icon("extrude") `Extrude`. Select the previous sketch in the graphics area. 
 
-#warning[If in the previous step you failed to close the sketch, Onshape will ]
+#warning[Onshape will not be able to extrude-remove a sketch if is it open and will warn you in the dialog box with `Missing Faces`. Repeat the #link(<splines-and-lines>)[Step 5] to correct this.]
+
+
+Since we are trying to remove material, select `Remove` from the second row of options in the dialog box and change the end condition  to `Through all` as seen in @extrude-remove. This will project the sketch through the entire model and remove any interesting geometry, resulting in a curved hull nose.
 ]
 )
 
 == 7 - Shaping the bottom of the hull
-#oasis-align([Create a third #icon("sketch") `Sketch`, this time on the flat back side of the boat. First create a center line using the #icon("line") `Line` tool by aligning with the top and bottom midpoints of the hull. Make this line a construction line by clicking the #icon("construction") `Construction` tool. 
+#oasis-align([Create a third #icon("sketch") `Sketch`, this time on the flat back side of the boat. First create a center line using the #icon("line") `Line` tool by aligning with the top and bottom midpoints of the hull as seen in @bottom-spline. Make this line a construction line by selecting the #icon("construction") `Construction` tool. 
 
-Next, using the  #icon("spline") `Spline` tool, create an arc same similar to @bottom-spline. Here, the nodes do not need to be precisely aligned, and you are encouraged to experiment with different shapes. 
+Next, using the  #icon("spline") `Spline` tool, create an arc same similar to @bottom-spline. Once more, the nodes do not need to be precisely aligned, but should closely match @bottom-spline. 
 ], 
-warning[When making the spline, make sure the endpoints don't terminate at a corner of the hull.This is to allow for the use of "imprinting" when extruding the sketch.])
+note[Here, we do not need close the sketch like in #link(<splines-and-lines>)[Step 5]. This is because the flat sketch surface allows us to use "imprint" the already existing geometry of our boat to the sketch.])
 
 Next, click the #icon("mirror") `Mirror` tool to mirror the spline across the centerline you created earlier. Onshape will prompt you for the order in which objects should be selected. The final result will look like @mirror, and any future adjustments will keep both sides identical. 
 
@@ -207,7 +216,9 @@ Next, click the #icon("mirror") `Mirror` tool to mirror the spline across the ce
 )
 
 == 8 - Rounding the corners
-#oasis-align(int-dir:1, [Select the #icon("fillet") `Fillet` tool from the tool bar, and select the top two arcs found at the front of the ship. In the dialog box, set the `Radius` to `1.9 in`,  Notice that the curve propagates to the rest of the hull as seen in @fillet.
+#oasis-align(int-dir:-1, [Select the #icon("fillet") `Fillet` tool from the tool bar, and select the top two arcs found at the front of the ship. In the dialog box, set the `Radius` to `1.9 in`. 
+// Take a moment to observe how the #icon("fillet") `Fillet` has changed the geometry of the boat.  
+Notice that the two edges we selected create a curve that propagates to the rest of the hull as seen in @fillet. Lastly, click the check mark to close the dialog window.
 
 #warning[Setting the `Radius` to the height of the boat will result in the fillet failing. 
 Therefore, we make the `Radius` 0.1in less than the height of the ship.
@@ -217,23 +228,27 @@ Therefore, we make the `Radius` 0.1in less than the height of the ship.
 [#figure(image("images/fillet.png"), caption: []) <fillet> ])
 
 == 9 - Hollowing out the hull
-#oasis-align(int-dir: 1,
-[#figure(image("images/shell.png"), caption: []), <shell>],  
+#oasis-align(int-dir: -1,
+[#figure(image("images/shell.png"), caption: []), <shelly>],  
 [
 // Now that we have shaped the exterior of the hull, we can use the #icon("shell") `Shell` tool to carve out its interior.
-Select the #icon("shell") `Shell` tool from the tool bar and click on the top surface of the boat. A preview of the feature should appear in the graphics area as seen in #link("lol")[Figure 21]. Set the `Shell thickness` to `0.25in`. 
+Select the #icon("shell") `Shell` tool from the tool bar and click on the top surface of the boat. A preview of the feature should appear in the graphics area as seen in #link("lol")[Figure 21]. Drag the slider directly under the  `Shell thickness` to fade in and out the preview of the feature. 
+
+Set the `Shell thickness` to `0.25in` and exit the dialog window by clicking the check mark as seen in #link("lol")[Figure 21].
 
 #tip[The resulting geometry of the hull interior is not ideal for placing electronics. Therefore, consider adding additional features to create a flat surface. ]
 ])
 
 = Conclusion
-#oasis-align([Congratulations! You have just finished making a model boat in Onshape! This model is a great base for any boat design, but needs to be expanded on to be viable for competition. Consider adding cutouts for your motors and propellers, and try to find ways to protect your electronics from getting splashed with water. Try an think of other ways that a boat can be modeled. Thanks for following along, and se you at the next meeting!], 
+#oasis-align([Congratulations! You have just finished making a model boat in Onshape! This model is a great base for any boat design, but needs to be expanded on to be viable for competition. Consider adding cutouts for your motors and propellers, and try to find ways to protect your electronics from getting splashed with water. Try an think of other ways that a boat can be modeled. Thanks for following along, and see you at the next meeting!], 
 success(title: [Learned Skills], [
-  - Make a sketch using lines and arcs
-  - Constrain sketch geometry using relations and dimensions
-  - Extrude add and extrude remove geometry
+  - Make a sketch using rectangles, circle, lines and splines
+  - Constrain and modify sketch geometry using relations and dimensions
+  - Extrude-add and extrude-remove geometry
   - Fillet and shell a model
   ]))
+
+  // #note[You can follow this tutorial in a different CAD Software. While the user interfaces differ, this tutorial utilizes conventional operations that are common to all CAD software.]
 
 /** 
 - Move beyond congrats
