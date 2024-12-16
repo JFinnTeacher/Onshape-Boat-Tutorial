@@ -1,15 +1,11 @@
 #import "template.typ": *
 #import "@preview/oasis-align:0.1.0": *
-#import "@preview/wrap-it:0.1.0": wrap-content
 #import "callouts.typ": *
-// #import "@preview/babble-bubbles:0.1.0": *
-
 
 #show: project.with(
   title: "How to Make a Basic Model Boat in Onshape", // make, model, version + procedure + context
   authors: "Jason Daniel Pieck",
   affiliations: "UWP 102E A03"
-  
 )
 
 /** 
@@ -37,7 +33,7 @@ As part of the team's training regimen, you and your team will be asked to desig
 //  that you and your team are encouraged to build off of.
 
 
-#figure(image("images/overview.png"), caption: []) <overview>
+#figure(image("../images/overview.png"), caption: []) <overview>
 //highlight
 
 
@@ -71,7 +67,7 @@ We will start by sketching the basic shape of a boat before "extruding" (project
 /** 
 Options:
 - Tabular: text on one side of table, image on the other
-  - images should be dynamic (images of action)
+  - ../images should be dynamic (../images of action)
 - Freeform: whatever goes
   - careful about getting readers lost
 - Combo
@@ -81,8 +77,8 @@ Make sure that steps are:
 - include supplementary explanations
 **/
 
-// #box(image("images/sketch-button.png"))
-// #figure(image("images/sketch.png"), caption: []) <sketch>])
+// #box(image("../images/sketch-button.png"))
+// #figure(image("../images/sketch.png"), caption: []) <sketch>])
 
 == 1 - Starting Your first Sketch
 #oasis-align(int-dir: -1, 
@@ -91,11 +87,13 @@ Make sure that steps are:
 // A sketch is a 2D structure that exists on a plane. 
 To make your first sketch, click the #icon("sketch") `Sketch` button on the left side of the tool bar. Onshape will then prompt you to select a plane. Select the top plane by either clicking on the plane in the view-window or on the "Feature List" as seen in @select-plane. To view the plane head on, select `Top` on the "View-Finder" also seen in @select-plane.
 ],
-[#figure(image("images/select-plane.png"), caption: []) <select-plane>
+[#figure(image("../images/select-plane.png"), caption: []) <select-plane>
 ])
 // It is best practice to be looking directly at the plane you are working on, so navigate to the view-finder at the top right of the screen and click on the `Top` surface. This will reorient your view-window such that you now face the top plane directly head on. 
-// [#figure(image("images/view-finder.png"), caption: []) <view-finder>
+// [#figure(image("../images/view-finder.png"), caption: []) <view-finder>
 // ])
+// 
+// 
 == 2 - Sketching base of the boat contour
 
 #oasis-align([Select the #icon("center-rect") `Center point rectangle` tool from the rectangle tools dropdown as seen in @rect-tool. After selecting, your tool should change in a cross-hair shaped like a plus sign.
@@ -103,10 +101,10 @@ To make your first sketch, click the #icon("sketch") `Sketch` button on the left
 
 Click on the origin point and then move your mouse outwards in the direction indicated in @rect-sketch. Right now, the size and dimensions of the rectangle not matter, and does not need to mach  @rect-sketch.],
 
-[#figure(image("images/rect-tool.png"), caption: []) <rect-tool>
+[#figure(image("../images/rect-tool.png"), caption: []) <rect-tool>
 ])
 
-#oasis-align([#figure(image("images/rect-sketch.png"), caption: [], ) <rect-sketch>
+#oasis-align([#figure(image("../images/rect-sketch.png"), caption: [], ) <rect-sketch>
 ],
 [#warning[Failing to select the origin point when starting the sketch will result an under-defined sketch that does not align with the default geometry of the model. To check, zoom into the center of the rectangle. The origin and center point should be overlapping. 
 // This can cause issues later down the line in more complex models, and should be avoided whenever possible.
@@ -120,8 +118,8 @@ Now that we have rectangle, we can add dimensions. Select the #icon("dim") `Dime
   [To set the length of the bottom side of the rectangle, we are going to use a relation instead of the #icon("dim") `Dimension` tool. Select two perpendicular sides and then select the #icon("equal") `Equal` relation from the dropdown as show in @rect-equal. This relation forces the two sides to be equal such that changing the earlier set dimension will change both sides. 
   ],
   [#oasis-align(
-    [#figure(image("images/rect-dim.png"), caption: []) <rect-dim>],
-    [#figure(image("images/rect-equal.png"), caption: []) <rect-equal>
+    [#figure(image("../images/rect-dim.png"), caption: []) <rect-dim>],
+    [#figure(image("../images/rect-equal.png"), caption: []) <rect-equal>
   ])]
 )
 
@@ -131,9 +129,9 @@ Using the #icon("circle") `Circle` tool, add two circles to your the top corners
 
 Next, select the #icon("trim") `Trim` tool and click and drag your mouse along the paths of the arrows drawn in @trim-tool. This process will remove parts of the circle from the sketch. Once you are finished, your sketch should look like @finished-boat-contour. Select the green check mark as seen in @finished-boat-contour, and your sketch is finished!
 
-#oasis-align([#oasis-align([#figure(image("images/double-circle.png"), caption: []) <double-circle>
-],[#figure(image("images/trim-tool.png"), caption: []) <trim-tool>])],
-[#figure(image("images/finished-boat-contour.png"), caption: []) <finished-boat-contour>])
+#oasis-align([#oasis-align([#figure(image("../images/double-circle.png"), caption: []) <double-circle>
+],[#figure(image("../images/trim-tool.png"), caption: []) <trim-tool>])],
+[#figure(image("../images/finished-boat-contour.png"), caption: []) <finished-boat-contour>])
 
 // #tip[The trim tool is a great way to remove unwanted geometry from a sketch.]
 
@@ -145,8 +143,8 @@ Click the #icon("extrude") `Extrude` button in toolbar
 // next to the `Sketch` button, 
 and then select the face of sketch 1 as shown in as seen in @extrude-contour. Similar Step 1, you can also click the sketch from the "Feature List". Set the `Depth` of the extrude to `2in` and click the check mark. If you reorient your part, it should now look like @boat-base-done
 ],
-oasis-align([#figure(image("images/extrude-contour.png"), caption: []) <extrude-contour>
-], [#figure(image("images/boat-base-done.png"), caption: []) <boat-base-done>]))
+oasis-align([#figure(image("../images/extrude-contour.png"), caption: []) <extrude-contour>
+], [#figure(image("../images/boat-base-done.png"), caption: []) <boat-base-done>]))
 
 == 5 - Sketching with splines and lines <splines-and-lines>
 #oasis-align([
@@ -155,10 +153,10 @@ Create another #icon("sketch") `Sketch` and select the flat side surface of the 
 
 #note[Onshape will not allow you to built a sketch on a curved surface. As a result, we need to built a sketch that is offset from the surface]
 ],
-[#figure(image("images/side-plane.png"), caption: []) <side-plane>],)
+[#figure(image("../images/side-plane.png"), caption: []) <side-plane>],)
 
 #oasis-align(
-[#figure(image("images/coincident.png"), caption: []) <coincident>],
+[#figure(image("../images/coincident.png"), caption: []) <coincident>],
 [Looking at the tipped end of the boat, add a spline using the #icon("spline") `Spline` tool. Start at the point where the middle face line meets the bottom edge of the boat and then click a short distance above the top of the boat as shown in @coincident. After adding a second point, press `Esc` twice on your keyboard. Once your mouse is no longer a crosshair, click on the end point of the spline and the tip of the boat, and then add a relation called #icon("coincident") `Coincident`. This will force the two points to overlap. ], 
 )
 
@@ -167,10 +165,10 @@ Add another #icon("coincident") `Coincident` relationship, this time between the
 Complete the sketch by using the #icon("line") `Line` tool to draw two lines shown with arrows in @complete-sketch to close the sketch. If the sketch is successfully closed, the interior of the sketch will become slightly darker in color.. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
 
 #oasis-align(
-  [#figure(image("images/spline-align.png"), caption: []) <spline-align>],
+  [#figure(image("../images/spline-align.png"), caption: []) <spline-align>],
   oasis-align(
-    [#figure(image("images/spline-drag.png"), caption: []) <spline-drag>],
-    [#figure(image("images/complete-sketch.png"), caption: []) <complete-sketch>],
+    [#figure(image("../images/spline-drag.png"), caption: []) <spline-drag>],
+    [#figure(image("../images/complete-sketch.png"), caption: []) <complete-sketch>],
 ))
 
 
@@ -183,14 +181,14 @@ Complete the sketch by using the #icon("line") `Line` tool to draw two lines sho
 // #oasis-align(
 // [Compelete the sketch by using the #icon("line") `Line` tool to draw two lines and close the shape of the spline. If the sketch is successfully closed it will look like @complete-sketch. Exit the sketch, and make another extrude. This time, select `Remove`, and change the end condition  to `Through all`. 
 
-// #figure(image("images/complete-sketch.png"), caption: []) <complete-sketch>
+// #figure(image("../images/complete-sketch.png"), caption: []) <complete-sketch>
 // ], 
-// [#figure(image("images/extrude-remove.png"), caption: []) <extrude-remove>]
+// [#figure(image("../images/extrude-remove.png"), caption: []) <extrude-remove>]
 // )
 
 == 6 - Extrude-remove the sketch
 #oasis-align(int-dir: -1,
-[#figure(image("images/extrude-remove.png"), caption: []) <extrude-remove>], 
+[#figure(image("../images/extrude-remove.png"), caption: []) <extrude-remove>], 
 [Exit the sketch, and make another #icon("extrude") `Extrude`. Select the previous sketch in the graphics area. 
 
 #warning[Onshape will not be able to extrude-remove a sketch if is it open and will warn you in the dialog box with `Missing Faces`. Repeat the #link(<splines-and-lines>)[Step 5] to correct this.]
@@ -211,8 +209,8 @@ Next, click the #icon("mirror") `Mirror` tool to mirror the spline across the ce
 
 
 #oasis-align(
-[#figure(image("images/bottom-spline.png"), caption: []) <bottom-spline>], 
-[#figure(image("images/mirror.png"), caption: []) <mirror>]
+[#figure(image("../images/bottom-spline.png"), caption: []) <bottom-spline>], 
+[#figure(image("../images/mirror.png"), caption: []) <mirror>]
 )
 
 == 8 - Rounding the corners
@@ -225,11 +223,11 @@ Therefore, we make the `Radius` 0.1in less than the height of the ship.
 //  This is because of the geometry we created at the tip of the boat. 
  ]
 ], 
-[#figure(image("images/fillet.png"), caption: []) <fillet> ])
+[#figure(image("../images/fillet.png"), caption: []) <fillet> ])
 
 == 9 - Hollowing out the hull
 #oasis-align(int-dir: -1,
-[#figure(image("images/shell.png"), caption: []), <shelly>],  
+[#figure(image("../images/shell.png"), caption: []), <shelly>],  
 [
 // Now that we have shaped the exterior of the hull, we can use the #icon("shell") `Shell` tool to carve out its interior.
 Select the #icon("shell") `Shell` tool from the tool bar and click on the top surface of the boat. A preview of the feature should appear in the graphics area as seen in #link("lol")[Figure 21]. Drag the slider directly under the  `Shell thickness` to fade in and out the preview of the feature. 

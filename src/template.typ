@@ -82,13 +82,12 @@
 
   // show image: it => {block(stroke: 1pt + light-accent-color, radius: .5pt, it)}
 
-
   body
   
 }
 
 #let icon(name) = {
-  let path = "icons/" + name + ".svg"
+  let path = "../icons/" + name + ".svg"
   box(
     height: .7em,
     inset: (x: 0.05em, y: -0.22em),
