@@ -5,7 +5,8 @@
 #show: project.with(
   title: "How to Make a Basic Model Boat in Onshape", // make, model, version + procedure + context
   authors: "Jason Daniel Pieck",
-  affiliations: "UWP 102E A03"
+  affiliations: "UWP 102E A03",
+  date: "October 28, 2024"
 )
 
 /** 
