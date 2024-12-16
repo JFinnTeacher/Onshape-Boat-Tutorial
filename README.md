@@ -20,8 +20,8 @@ Typst’s dynamic nature particularly shines in layout design. Its adaptive layo
 Thank you for exploring this repository! Please feel free to reach out if you have any questions. I hope it inspires you to try Typst and explore its capabilities for your own projects!
 
 # Images of Pages
-![Page 1](renders\Onshape-Boat-Tutorial_page-1-of-5.png)
-![Page 2](renders\Onshape-Boat-Tutorial_page-2-of-5.png)
+![Page 1](renders/Onshape-Boat-Tutorial_page-1-of-5.png)
+![Page 2](renders/Onshape-Boat-Tutorial_page-2-of-5.png)
 ![Page 3](renders/Onshape-Boat-Tutorial_page-3-of-5.png)
 ![Page 4](renders/Onshape-Boat-Tutorial_page-4-of-5.png)
 ![Page 5](renders/Onshape-Boat-Tutorial_page-5-of-5.png)
